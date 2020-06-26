@@ -6,8 +6,6 @@ use App\Entity\Series;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\FormEvent;
-use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\File;
 
@@ -38,22 +36,7 @@ class SeriesType extends AbstractType
             ->add('image')
             ->add('created_at')
             ->add('Kinds')
-            ->addEventListener(
-                FormEvents::PRE_SET_DATA,
-                [$this, 'onPreSetData']
-            )
         ;
-    }
-
-    public function onPreSetData(FormEvent $event)
-    {
-        $form = $event->getForm(); //récupération du formulaire
-
-        /** @var $entity Series */
-        $entity = $event->getData(); //récupération de l'entité
-
-        $form->remove('created_at');
-        $entity->setCreatedAt(new \DateTime('now'));
     }
 
     public function configureOptions(OptionsResolver $resolver)

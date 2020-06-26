@@ -45,7 +45,7 @@ class CommentsRepository extends ServiceEntityRepository
 
     public function averageValidatedCommentsBySerie(Series $series) {
         return $this->createQueryBuilder('c')
-            ->select('AVG(c.positive)')
+            ->select('AVG(c.validated)')
             ->setParameter('series', $series)
             ->where('c.Series = :series')
             ->getQuery()
