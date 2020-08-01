@@ -1,9 +1,6 @@
 #MARATHON 2019 - 2020**
 
 ___
-___
-___
-___
 
 ## Installation
 
@@ -22,10 +19,6 @@ DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.
 ```
 ./install
 ```
-
-___
-___
-___
 ___
 
 ## Launch Server Symfony local
@@ -37,11 +30,6 @@ ___
 ```
 ./symfony server:stop
 ```
-
-
-___
-___
-___
 ___
 
 ## Update CSS or/and JS
@@ -72,11 +60,6 @@ npm run dev
 ```
 npm run build
 ```
-
-
-
-___
-___
 ___
 
 ## Utilisateur
@@ -88,9 +71,6 @@ ___
 | Gilles |   Gilles   |   ROLE_USER |
 | Sebastien |   Sebastien   |   ROLE_USER |
 
-
-___
-___
 ___
 
 
@@ -100,31 +80,12 @@ chown -R www-data:www-data public/images/users
 chown -R www-data:www-data public/video/series
 ```
 
-
-___
-___
 ___
 
 
 
 ## Enjoy and team play
 
-
-
-
-___
-___
-___
-
-
-___
-___
-___
-
-
-___
-___
-___
 
 
 Coréalisé par François Lannoy, Mathieu Degand, Christophe Guide, Romain Peliks, Said Ladghem.
